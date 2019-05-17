@@ -32,7 +32,6 @@ if (categoria=="sin") {
     request.send();
 
 
-
 var container = document.body;
 
 // slide options
@@ -65,6 +64,8 @@ var Cell = function(x, y) {
     var node = document.createElement('div');
     node.className = 'cell';
     node.style.left = x * (100/columnas) + '%';
+    node.style.width= (100/columnas) + '%';
+    node.style.height=(100/filas) + '%';
     node.style.top  = y *(100/filas) + '%';
     this.node = node;
 
