@@ -1,0 +1,43 @@
+extends layout
+
+block content
+
+    h1(class="display-1") Trends
+    p Welcome to #{title}
+        <form action="/trends" method="get">
+        <div class="form-group">
+        p(class="h5") Paises
+        select(class="form-control" name="paisSel")#paises(required=true)
+            <option disabled value="" selected hidden>Elegir pais</option>
+        </div>
+        <div class="form-group">
+        p(class="h5") Categorias (opcional)
+        select(class="form-control" name="categoriaSel" )#categorias
+            option(selected disabled) Elegir categoria
+        </div>
+        <div class="form-group">
+        p(class="h5") Filas
+        select(class="form-control" name="filasSel" required=true)#filas
+            <option disabled value="" selected hidden>Elegir fila</option>
+            option 3
+            option 4
+            option 5
+        </div>
+        <div class="form-group">
+        p(class="h5") Columnas
+        select(class="form-control" name="columnasSel" required=true)#columnas
+            <option disabled value="" selected hidden>Elegir columnas</option>
+            option 3
+            option 4
+            option 5
+        </div>
+        <div class="form-group">
+        p(class="h5") Opcion
+        select(class="form-control" name="opcionSel" required=true)#opcion
+            <option disabled value="" selected hidden>Elegir opcion</option>
+            option Nombre
+            option Imagen
+        </div>
+        <button class="btn btn-primary" type="submit">Buscar</button>
+    </form>
+    script(src='/javascripts/script.js')
